@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   devise_for :usuarios, :path_names => {
     :sign_in  => 'entrar',
     :sign_out => 'sair',
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
     sessions: 'usuarios/sessions'
   }
   namespace :dashboard do
-    resources :home, :path => '/'
+      resources :home, :path => '/'
   end
 
 
