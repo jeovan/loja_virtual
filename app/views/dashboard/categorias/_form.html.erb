@@ -1,0 +1,27 @@
+<%= form_with(model: dashboard_categoria) do |form| %>
+  <% if dashboard_categoria.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dashboard_categoria.errors.count, "error") %> prohibited this dashboard_categoria from being saved:</h2>
+
+      <ul>
+        <% dashboard_categoria.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

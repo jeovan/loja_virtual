@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dashboard_categoria.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @dashboard_categoria.descricao %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_categoria_path(@dashboard_categoria) %> |
+<%= link_to 'Back', dashboard_categorias_path %>

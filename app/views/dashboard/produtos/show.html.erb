@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dashboard_produto.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @dashboard_produto.descricao %>
+</p>
+
+<p>
+  <strong>Preco:</strong>
+  <%= @dashboard_produto.preco %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @dashboard_produto.quantidade %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @dashboard_produto.categoria %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_produto_path(@dashboard_produto) %> |
+<%= link_to 'Back', dashboard_produtos_path %>

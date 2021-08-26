@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboard Produtos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Preco</th>
+      <th>Quantidade</th>
+      <th>Categoria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboard_produtos.each do |dashboard_produto| %>
+      <tr>
+        <td><%= dashboard_produto.nome %></td>
+        <td><%= dashboard_produto.descricao %></td>
+        <td><%= dashboard_produto.preco %></td>
+        <td><%= dashboard_produto.quantidade %></td>
+        <td> <%= dashboard_produto.categoria%></td>
+        <td><%= link_to 'Show', dashboard_produto %></td>
+        <td><%= link_to 'Edit', edit_dashboard_produto_path(dashboard_produto) %></td>
+        <td><%= link_to 'Destroy', dashboard_produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dashboard Produto', new_dashboard_produto_path %>

@@ -17,4 +17,5 @@
 
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'usuario', 'usuarios'
+  inflect.irregular 'categoria', 'categorias'
 end

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
   
+  namespace :dashboard do
+    resources :categorias
+  end
+  namespace :dashboard do
+    resources :produtos
+  end
   devise_for :usuarios, :path_names => {
     :sign_in  => 'entrar',
     :sign_out => 'sair',
