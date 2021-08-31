@@ -1,4 +1,7 @@
 class Dashboard::Produto < ApplicationRecord
+
+  belongs_to :categoria
+
   self.table_name = "produtos"
 
   validates :nome, presence: {
@@ -6,7 +9,7 @@ class Dashboard::Produto < ApplicationRecord
   }
   validates :preco, presence: true
   validates :quantidade, presence: true
-  validates :categoria, presence: true
+  # validates :categoria, presence: true
 
   validate :validar_nome
 

@@ -32,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :categoria %>
-    <%= form.text_field :categoria %>
+    <%= form.label :categoria_id %>
+    <%= form.collection_select(:categoria_id , Dashboard::Categoria.all,:id,:nome) %>
   </div>
 
   <div class="actions">
