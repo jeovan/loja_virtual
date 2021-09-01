@@ -1,6 +1,7 @@
 class Dashboard::ProdutosController < ApplicationController
   before_action :set_dashboard_produto, only: %i[ show edit update destroy ]
-  # layout 'dashboard'
+  before_action :administrador?
+  layout 'dashboard'
   # GET /dashboard/produtos or /dashboard/produtos.json
   def index
     @dashboard_produtos = Dashboard::Produto.all
@@ -65,5 +66,9 @@ class Dashboard::ProdutosController < ApplicationController
     # Only allow a list of trusted parameters through.
     def dashboard_produto_params
       params.require(:dashboard_produto).permit(:nome, :descricao, :preco, :quantidade, :categoria_id)
+    end
+
+    def administrador?
+      redirect_to '/'  if current_usuario.perfil != 'ADMINISTRADOR'
     end
 end

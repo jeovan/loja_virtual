@@ -14,7 +14,11 @@
     <%= render 'dashboard/partials/navbar' %>
     <main>
       <%= render 'dashboard/partials/sidebar'%>
-      <%= yield %>
+
+      <div class="container">
+        <%= yield %>
+      </div>
+      
     </main>
   </body>
 </html>

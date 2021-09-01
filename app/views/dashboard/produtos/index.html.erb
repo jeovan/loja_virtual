@@ -2,7 +2,7 @@
 
 <h1>Dashboard Produtos</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Nome</th>
@@ -21,7 +21,7 @@
         <td><%= dashboard_produto.descricao %></td>
         <td><%= dashboard_produto.preco %></td>
         <td><%= dashboard_produto.quantidade %></td>
-        <td> <%= dashboard_produto.categoria%></td>
+        <td> <%= dashboard_produto.categoria&.nome%></td>
         <td><%= link_to 'Show', dashboard_produto %></td>
         <td><%= link_to 'Edit', edit_dashboard_produto_path(dashboard_produto) %></td>
         <td><%= link_to 'Destroy', dashboard_produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
