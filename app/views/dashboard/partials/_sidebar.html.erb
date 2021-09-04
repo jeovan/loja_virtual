@@ -1,35 +1,8 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar-custom" style="width: 280px">
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-          menu 1
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          menu 1
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          menu 1
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          menu 1
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          menu 1
-        </a>
-      </li>
+        <%= item_menu(dashboard_home_index_path , 'HOME')%>
+        <%= item_menu(dashboard_categorias_path , 'CATEGORIAS')%>
+        <%= item_menu(dashboard_produtos_path , 'PRODUTOS')%>
     </ul>
     <hr>
 

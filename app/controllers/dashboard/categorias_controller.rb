@@ -1,6 +1,6 @@
 class Dashboard::CategoriasController < ApplicationController
   before_action :set_dashboard_categoria, only: %i[ show edit update destroy ]
-
+  layout 'dashboard'
   # GET /dashboard/categorias or /dashboard/categorias.json
   def index
     @dashboard_categorias = Dashboard::Categoria.all

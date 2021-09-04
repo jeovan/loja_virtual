@@ -19,7 +19,7 @@
       <tr>
         <td><%= dashboard_produto.nome %></td>
         <td><%= dashboard_produto.descricao %></td>
-        <td><%= dashboard_produto.preco %></td>
+        <td style="text-align:right"><%= number_to_currency(dashboard_produto.preco, :unit => 'R$ ',:separator => ',', :delimitador => '.') %></td>
         <td><%= dashboard_produto.quantidade %></td>
         <td> <%= dashboard_produto.categoria&.nome%></td>
         <td><%= link_to 'Show', dashboard_produto %></td>
