@@ -1,1 +1,7 @@
-pagina da loja
+<section> 
+  <div class="row">
+     <% (@produtos || []).each do |produto|%>
+        <%= render 'loja/partials/item_produto', produto: produto%>
+     <%end%>
+  </div>
+</section>

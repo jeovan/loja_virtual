@@ -1,0 +1,36 @@
+<%unless current_usuario.present?%>
+        <%= form_for(:usuario, :url => usuario_session_path,:html => {:class => 'search-form rounded py-2'}) do |f| %>
+          <div class="row">
+            <div class="form-group col-sm-6 my-2">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'form-control' %>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="form-group col-sm-8 my-2">
+                  <%= f.password_field :password, autocomplete: "current-password",class:'form-control' %>
+                </div>
+                <div class="col-sm-4 my-2">
+                  <%= f.submit "Log in", class: 'btn btn-primary', style: 'width:100%' %>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        <%end%>
+      <%else%>
+        <div class="search-form rounded py-2" action="">
+          <div class="row pull-right">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="form-group col-sm-9 my-2">
+                  <p style="text-align:right;width:100%;margin-top:5px"><%= current_usuario.email%></p>
+                </div>
+                <div class="col-sm-3 my-2">
+                <%= button_to "SAIR", destroy_usuario_session_path, method: :delete, class: 'btn btn-primary',style: 'width:100%' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end%>
