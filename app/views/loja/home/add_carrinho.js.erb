@@ -1,0 +1,5 @@
+document.getElementById('total_carrinho').innerHTML = <%= session[:carrinho].length%>
+
+<% if @error.present?%>
+  alert('<%= @error%>')
+<%end%>

@@ -1,6 +1,6 @@
 <div class="col-md-4">
           <div class="card">
-            <img class="item rounded mx-auto d-block" src="https://i.pinimg.com/originals/4a/38/7b/4a387bda853bca3782d73234c786a150.png" alt="Card image cap" style="width:80%;height:250px">
+            <img class="item rounded mx-auto d-block" src="<%= produto.img || 'https://i.pinimg.com/originals/4a/38/7b/4a387bda853bca3782d73234c786a150.png' %>" alt="Card image cap" style="width:80%;height:250px">
             
             <div class="card-body">
               <div class="caption">
@@ -13,7 +13,7 @@
                   </h5>
                 </div>
                 <p><%#= produto.descricao%></p>
-                <a href="--" class="btn btn-primary" style="float: right;">COMPRAR</a>
+                <a href="<%= loja_add_carrinho_path(:id_produto => produto.id)%>" class="btn btn-primary" data-remote="true" style="float: right;">COMPRAR</a>
               </div>
             </div>
           </div>

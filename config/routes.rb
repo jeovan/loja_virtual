@@ -22,7 +22,10 @@ Rails.application.routes.draw do
 
 
   namespace :loja, :path => '/' do
-    resources :home, :path => '/'
+    
+    resources :home, :path => '/', only: [:index]
+    get '/add_carrinho', to: 'home#add_carrinho'
+    get '/finalizar_compra', to: 'home#finalizar_compra'
   end
 
 end

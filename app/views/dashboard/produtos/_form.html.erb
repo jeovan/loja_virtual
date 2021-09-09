@@ -36,6 +36,11 @@
     <%= form.collection_select(:categoria_id , Dashboard::Categoria.all,:id,:nome) %>
   </div>
 
+   <div class="field">
+    <%= form.label "URL DA IMG" %>
+    <%= form.text_field :img %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

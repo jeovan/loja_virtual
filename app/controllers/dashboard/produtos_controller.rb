@@ -65,7 +65,7 @@ class Dashboard::ProdutosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def dashboard_produto_params
-      params.require(:dashboard_produto).permit(:nome, :descricao, :preco, :quantidade, :categoria_id)
+      params.require(:dashboard_produto).permit(:nome, :descricao, :preco, :quantidade, :categoria_id, :img)
     end
 
     def administrador?

@@ -23,7 +23,15 @@
             <div class="col-sm-6"></div>
             <div class="col-sm-6">
               <div class="row">
-                <div class="form-group col-sm-9 my-2">
+
+                <div class="form-group col-sm-2 my-2" style="padding:0">
+                  <a href="<%= ''%>" style="text-decoration:none" >
+                  <img src="https://i.pinimg.com/564x/20/3c/7c/203c7caffaa568c44013ca1dae3fe24c.jpg" style="width:60%;height:40px">
+                  <p id="total_carrinho" style="text-align:right;font-size:20px;position:relative;top:-50px;left:-10px"><%= session[:carrinho].length%></p>
+                  </a>
+                </div>
+                
+                <div class="form-group col-sm-7 my-2">
                   <p style="text-align:right;width:100%;margin-top:5px"><%= current_usuario.email%></p>
                 </div>
                 <div class="col-sm-3 my-2">
