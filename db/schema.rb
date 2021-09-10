@@ -10,13 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_223215) do
+ActiveRecord::Schema.define(version: 2021_09_09_235809) do
 
   create_table "categorias", force: :cascade do |t|
     t.string "nome"
     t.text "descricao"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pedidos", force: :cascade do |t|
+    t.integer "usuario_id"
+    t.decimal "valor_total"
+    t.string "codigo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["usuario_id"], name: "index_pedidos_on_usuario_id"
+  end
+
+  create_table "pedidos_produtos", force: :cascade do |t|
+    t.integer "pedidos_d"
+    t.integer "produto_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pedidos_d"], name: "index_pedidos_produtos_on_pedidos_d"
+    t.index ["produto_id"], name: "index_pedidos_produtos_on_produto_id"
   end
 
   create_table "produtos", force: :cascade do |t|

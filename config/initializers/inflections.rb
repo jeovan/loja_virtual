@@ -18,4 +18,6 @@
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'usuario', 'usuarios'
   inflect.irregular 'categoria', 'categorias'
+  inflect.irregular 'pedido', 'pedidos'
+  inflect.irregular 'pedido_produto', 'pedidos_produtos'
 end

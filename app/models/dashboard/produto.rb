@@ -1,5 +1,9 @@
 class Dashboard::Produto < ApplicationRecord
 
+
+  has_many :pedidos_produtos
+  has_many :pedidos, through: :pedidos_produtos
+
   belongs_to :categoria
 
   self.table_name = "produtos"

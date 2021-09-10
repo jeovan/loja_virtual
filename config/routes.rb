@@ -26,6 +26,8 @@ Rails.application.routes.draw do
     resources :home, :path => '/', only: [:index]
     get '/add_carrinho', to: 'home#add_carrinho'
     get '/finalizar_compra', to: 'home#finalizar_compra'
+    post '/finalizar_pedido', to: 'home#finalizar_pedido'
+    # get '/finalizar_pedido'
   end
 
 end

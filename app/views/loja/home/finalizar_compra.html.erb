@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">PRODUTO</th>
+      <th scope="col">QUANTIDADE</th>
+      <th scope="col">VALOR UNIT.</th>
+      <th scope="col">VALOR TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @produtos.each do |produto|%>
+      <tr>
+        <td><%= produto.nome%></td>
+        <td><%= session[:carrinho].select{|id| id ==produto.id}.length%></td>
+        <td><%= produto.preco%></td>
+        <td><%= session[:carrinho].select{|id| id ==produto.id}.length * produto.preco%></td>
+      </tr>
+    <%end%>
+
+  </tbody>
+</table>
+
+<%= link_to "FINALIZAR COMPRA", loja_finalizar_pedido_path, method: :post, class: "btn btn-primary", style:"float:right" %>
